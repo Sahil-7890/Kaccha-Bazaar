@@ -1,0 +1,642 @@
+/* ==========================================
+   PREMIUM RESET & FONTS
+   ========================================== */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+
+/* NAYA: Futuristic Animated Background */
+.animated-bg {
+    background: linear-gradient(-45deg, #f4f8fb, #e0f2fe, #dcfce7, #f0fdf4);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: #1a1a1a;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ==========================================
+   FIX: AUTO-HIDING NAVBAR (SCROLL MAGIC)
+   ========================================== */
+.navbar {
+    position: fixed;       /* Content ke upar fixed rahega */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    height: 70px;
+    padding: 0 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    
+    /* Animation: Navbar slide hokar upar jayega */
+    transition: top 0.3s ease-in-out; 
+}
+
+/* Jab navbar hidden class lag jayegi, tab wo upar chhup jayega */
+.navbar.navbar-hidden {
+    top: -70px; 
+}
+
+/* Body mein top padding dena zaroori hai taaki navbar content ko cover na kare */
+body {
+    padding-top: 70px; 
+}
+
+/* Announcement Ticker */
+.announcement-ticker { background-color: #1e293b; color: #edf2f7; padding: 8px 0; overflow: hidden; white-space: nowrap; font-size: 0.9rem; font-weight: 500; }
+.ticker-text { display: inline-block; padding-left: 100%; animation: scrollTicker 20s linear infinite; }
+@keyframes scrollTicker { 0% { transform: translateX(0); } 100% { transform: translateX(-100%); } }
+
+/* Hero Section */
+.hero { text-align: center; padding: 60px 20px 40px 20px; max-width: 800px; margin: 0 auto; }
+/* NAYA 1000 IQ CENTER ALIGNED CODE WITH GLOW ANIMATION */
+.badge { 
+    display: inline-flex; /* Center locking technology */
+    align-items: center; 
+    justify-content: center;
+    gap: 8px; /* Clean spacing technology */
+    background: white; 
+    padding: 8px 16px; 
+    border-radius: 50px; 
+    font-size: 0.85rem; 
+    color: #4a5568; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05); 
+    margin-bottom: 25px; 
+    border: 1px solid #e2e8f0; 
+}
+
+.status-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #10b981; /* Fresh Green Color */
+    border-radius: 50%; /* Box ko perfectly gol (circle) banane ke liye */
+    display: inline-block;
+    animation: pulseStatus 2s infinite; /* 2 second ka continuous loop */
+}
+
+/* Radar-style pulsing glow effect */
+@keyframes pulseStatus {
+    0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.5); }
+    70% { box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+.hero h1 { font-size: 2.8rem; font-weight: 800; line-height: 1.2; color: #1e293b; margin-bottom: 15px; letter-spacing: -0.5px; }
+.subtitle { font-size: 1.15rem; color: #4a5568; margin-bottom: 35px; line-height: 1.6; }
+
+/* Buttons */
+.action-buttons { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+.btn { padding: 14px 28px; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 1.05rem; transition: all 0.3s; display: inline-flex; align-items: center; gap: 8px; }
+.btn-primary { background-color: #1a56db; color: white; border: none; box-shadow: 0 4px 15px rgba(26, 86, 219, 0.3); }
+.btn-primary:hover { background-color: #1e40af; transform: translateY(-2px); }
+.btn-outline { background-color: white; color: #4a5568; border: 2px solid #e2e8f0; }
+.btn-outline:hover { background-color: #f8fafc; border-color: #cbd5e0; }
+
+.pulse-button { animation: pulseEffect 2s infinite; }
+@keyframes pulseEffect { 0% { box-shadow: 0 0 0 0 rgba(26, 86, 219, 0.4); } 70% { box-shadow: 0 0 0 15px rgba(26, 86, 219, 0); } 100% { box-shadow: 0 0 0 0 rgba(26, 86, 219, 0); } }
+
+/* NAYA: Floating Veggie Banner */
+.veg-banner { margin-top: 40px; padding: 20px; background: rgba(255, 255, 255, 0.6); border-radius: 20px; border: 1px solid rgba(255,255,255,0.8); backdrop-filter: blur(5px); display: inline-block; box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
+.floating-items { font-size: 2.5rem; letter-spacing: 10px; animation: floatVeg 4s ease-in-out infinite; }
+@keyframes floatVeg { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-10px); } }
+
+/* NAYA: FIXED Features Section (Why Choose Us) */
+.features { max-width: 1000px; margin: 60px auto 80px auto; padding: 0 20px; text-align: center; }
+.features h2 { font-size: 2.2rem; color: #1e293b; margin-bottom: 40px; font-weight: 800; }
+.feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+.feature-card { background: white; padding: 40px 20px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.04); border: 1px solid #f1f5f9; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.feature-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
+.feature-card .icon { font-size: 3rem; margin-bottom: 20px; }
+.feature-card h3 { font-size: 1.3rem; color: #1e293b; margin-bottom: 12px; font-weight: 700; }
+.feature-card p { color: #64748b; font-size: 1rem; line-height: 1.6; }
+
+/* ==========================================
+   NEW PROFESSIONAL GRID FOOTER
+   ========================================== */
+.site-footer {
+    background: #0b1120;
+    color: #a0aec0;
+    padding-top: 50px;
+    margin-top: 40px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 0 20px 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.footer-logo {
+    height: 45px;
+    width: auto;
+    filter: brightness(0) invert(1);
+}
+
+.footer-col h3, .footer-col h4 {
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    color: #a0aec0;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: #10b981;
+}
+
+.footer-divider {
+    border-top: 1px solid #1e293b;
+    margin: 20px 0;
+}
+
+.copyright {
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 0.8rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+/* NAYA: Floating WhatsApp Button */
+.floating-whatsapp { position: fixed; bottom: 30px; right: 30px; background-color: #25D366; color: white; padding: 14px 24px; border-radius: 50px; font-weight: 700; font-size: 1.1rem; text-decoration: none; box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4); z-index: 1000; animation: bounce 2s infinite; display: flex; align-items: center; gap: 10px; transition: background 0.3s; }
+.floating-whatsapp:hover { background-color: #128C7E; color: white; }
+.whatsapp-icon { font-size: 1.4rem; }
+@keyframes bounce { 0%, 20%, 50%, 80%, 100% { transform: translateY(0); } 40% { transform: translateY(-10px); } 60% { transform: translateY(-5px); } }
+
+/* Entrance Animations */
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+.animate-1 { animation: fadeInUp 0.6s ease-out forwards; }
+.animate-2 { animation: fadeInUp 0.8s ease-out forwards; opacity: 0; }
+.animate-3 { animation: fadeInUp 1.0s ease-out forwards; opacity: 0; }
+.animate-4 { animation: fadeInUp 1.2s ease-out forwards; opacity: 0; }
+/* ==========================================
+   1000 IQ FIX: CATALOG PAGE (DUKAN KA PREMIUM LOOK)
+   ========================================== */
+
+/* Main Catalog Area */
+.catalog {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Premium Header & Search Box */
+.catalog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 25px;
+    border-radius: 20px;
+    backdrop-filter: blur(12px); /* Glassmorphism Effect */
+    border: 1px solid rgba(255,255,255,0.9);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+}
+
+.catalog-titles h2 { font-size: 2rem; color: #1e293b; font-weight: 800;}
+.catalog-titles p { color: #64748b; font-size: 1rem; margin-top: 5px; }
+
+/* Advanced Search Bar */
+.search-box {
+    background: white;
+    border: 2px solid #e2e8f0;
+    padding: 12px 25px;
+    border-radius: 50px; /* Pill Shape */
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 450px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+}
+
+/* Type karte waqt glow karega */
+.search-box:focus-within {
+    border-color: #3b82f6;
+    box-shadow: 0 4px 20px rgba(59, 130, 246, 0.15);
+}
+
+.search-box input {
+    border: none;
+    background: transparent;
+    outline: none;
+    margin-left: 12px;
+    width: 100%;
+    font-size: 1.05rem;
+    color: #1e293b;
+}
+
+/* ==========================================
+   SMART GRID & 3D CARDS
+   ========================================== */
+.grid-container {
+    display: grid;
+    /* Smart Formula: Phone pe kam se kam 160px ka dabba (2 aayenge), PC pe zyada */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 25px;
+    padding-bottom: 80px;
+}
+
+.product-card {
+    background: rgba(255, 255, 255, 0.85); /* Halka transparent */
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.9);
+    border-radius: 18px;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.04);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s;
+}
+
+/* 3D Hover Effect */
+.product-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    border-color: #e2e8f0;
+}
+
+.product-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: contain;
+    border-radius: 12px;
+    background: white; /* Image ka background solid white rahega */
+    margin-bottom: 18px;
+    padding: 5px;
+}
+
+.product-card h3 { 
+    font-size: 1.15rem; 
+    color: #1e293b; 
+    margin-bottom: 8px; 
+    font-weight: 700; 
+}
+
+.price-tag { 
+    color: #1a56db; 
+    font-weight: 800; 
+    font-size: 1.3rem; 
+}
+/* ==========================================
+   ADVANCED: CATALOG HEADER ANIMATIONS
+   ========================================== */
+
+/* Animated Gradient Text (Apple Style) */
+.gradient-text {
+    background: linear-gradient(to right, #1e293b, #1a56db, #10b981, #1e293b);
+    -webkit-background-clip: text;
+    background-clip: text; /* NAYI LINE: VS Code ki warning hatane ke liye */
+    -webkit-text-fill-color: transparent;
+    background-size: 200% auto;
+    animation: shineText 4s linear infinite;
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+@keyframes shineText {
+    to { background-position: 200% center; }
+}
+
+/* Live Market Pulse Indicator */
+.live-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(16, 185, 129, 0.1);
+    color: #10b981;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.live-dot {
+    width: 8px;
+    height: 8px;
+    background: #10b981;
+    border-radius: 50%;
+    animation: pulseLive 1.5s infinite;
+}
+
+@keyframes pulseLive {
+    0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.5); }
+    70% { box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+/* ==========================================
+   ADVANCED: SKELETON LOADING (SHIMMER EFFECT)
+   ========================================== */
+.skeleton-card {
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 18px;
+    padding: 20px;
+    border: 1px solid rgba(255,255,255,0.9);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.02);
+}
+
+.skeleton-img, .skeleton-text {
+    background: #e2e8f0; /* Base grey color */
+    /* NAYA: Light grey aur safed ka gradient jo ghumega */
+    background: linear-gradient(90deg, #e2e8f0 25%, #f8fafc 50%, #e2e8f0 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite linear;
+    border-radius: 8px;
+}
+
+.skeleton-img { 
+    height: 140px; 
+    width: 100%; 
+    margin-bottom: 18px; 
+}
+
+.skeleton-text { 
+    height: 20px; 
+    width: 80%; 
+    margin-bottom: 10px; 
+}
+
+.skeleton-text.short { 
+    width: 40%; 
+    height: 25px; 
+}
+
+@keyframes shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+/* ==========================================
+   MOBILE RESPONSIVENESS (The 2-Column Fix)
+   ========================================== */
+@media screen and (max-width: 600px) {
+    /* Main Grid - Strictly 2 Columns */
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px; /* Dabbo ke beech ka gap thoda kam kiya */
+        padding: 5px;
+    }
+
+    /* Card Adjustments */
+    .product-card {
+        padding: 12px; /* Card ke andar ki jagah adjust ki */
+        border-radius: 12px;
+    }
+
+    /* Image Adjustments */
+    .product-card img {
+        height: 100px; /* Photo size choti ki taaki screen se bahar na jaye */
+        margin-bottom: 10px;
+    }
+
+    /* Text Adjustments */
+    .product-card h3 {
+        font-size: 0.95rem; /* Font thoda chota kiya */
+        white-space: nowrap; /* Lamba naam do line me na toote */
+        overflow: hidden;
+        text-overflow: ellipsis; /* 'Shimla Mirch' ko 'Shimla M...' kar dega agar lamba hua */
+    }
+
+    .price-tag {
+        font-size: 1.1rem;
+    }
+
+    /* Landing Page Floating Banner - Mobile adjustment */
+    .floating-items {
+        font-size: 1.5rem;
+        letter-spacing: 5px;
+    }
+}
+  /* ==========================================
+   ADVANCED: PREMIUM CATEGORY DROPDOWN
+   ========================================== */
+.filter-dropdown-container {
+    position: relative;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 250px; /* Ise compact rakha hai */
+}
+
+.category-dropdown {
+    width: 100%;
+    padding: 12px 40px 12px 20px;
+    border-radius: 50px;
+    border: 2px solid #e2e8f0;
+    background: rgba(255, 255, 255, 0.9);
+    color: #1e293b;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    /* Yeh default boring arrow ko chhupa dega */
+    appearance: none; 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+}
+
+/* Jab koi uspar click karega */
+.category-dropdown:focus {
+    outline: none;
+    border-color: #10b981;
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.15);
+}
+
+/* Custom modern arrow icon */
+.dropdown-icon {
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #64748b;
+    pointer-events: none; /* Taki click seedha dropdown par lage */
+    font-size: 0.9rem;
+}
+/* ==========================================
+   FIX: HEADER CONTROLS ALIGNMENT
+   ========================================== */
+.header-controls {
+    display: flex;
+    flex-direction: column; /* Dropdown ko Search ke theek neeche rakhega */
+    gap: 15px; /* Dono ke beech ki thodi jagah */
+    width: 100%;
+    max-width: 320px; /* Dabbe ki max chaudai */
+}
+
+/* Purane dropdown container ka margin theek karne ke liye (Overwrite) */
+.filter-dropdown-container {
+    margin-top: 0 !important; 
+    max-width: 100% !important;
+}
+
+.search-box {
+    width: 100% !important; /* Search box ab theek se fit hoga */
+}
+/* ==========================================
+   FIX: SOCIAL ICONS PERFECT CENTERING
+   ========================================== */
+.social-icon i {
+    margin-right: 0 !important; /* Footer wale 8px margin ko cancel kiya */
+}
+
+/* Facebook ke 'f' ko visually center karne ke liye extra touch */
+.social-icon.fb i {
+    margin-left: 2px; /* 'f' thoda left jhuka hota hai, isliye usko balance kiya */
+}
+/* ==========================================
+   FIX: CUSTOM BRAND LOGO ALIGNMENT
+   ========================================== */
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Link ke neeche wali line hatane ke liye */
+}
+
+.brand-logo {
+    height: 60px; /* Logo ki height yahan se adjust karein (Bada karna ho toh 50px kar lein) */
+    width: auto; /* Width automatically set ho jayegi image ke hisaab se */
+    object-fit: contain; /* Image kategi nahi */
+    transition: transform 0.2s ease; /* Smooth animation engine */
+}
+
+/* Jab koi mouse layega toh logo halka sa aage aayega (Premium Feel) */
+.brand-logo:hover {
+    transform: scale(1.05);
+}
+/* ==========================================
+   ULTIMATE HARDWARE ACCELERATION PATCH 🚀
+   (Keeps Premium Look + 60fps Smooth Scroll)
+   ========================================== */
+
+/* 1. Force GPU Rendering (Lag-Free Animations) */
+.catalog-header, .product-card, .floating-items, .brand-logo {
+    /* Yeh commands in elements ko ek alag invisible 3D layer par daal deti hain */
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    will-change: transform, opacity; 
+}
+
+/* 2. Advanced Scroll Optimization (Smart Rendering) */
+.product-card {
+    /* Jo cards screen par nahi hain, browser unki rendering rok dega */
+    content-visibility: auto;
+    contain-intrinsic-size: 200px 250px; /* Browser ko card ki size ka idea dega */
+}
+
+/* 3. Optimized Premium Glassmorphism */
+.category-dropdown, .cat-btn, .search-box input {
+    /* Premium look maintain karega par blur radius kam karke GPU load 80% gira dega */
+    background: rgba(255, 255, 255, 0.88) !important;
+    backdrop-filter: blur(4px) !important; 
+    -webkit-backdrop-filter: blur(4px) !important;
+}
+
+/* 4. Text Animation Optimization */
+.gradient-text {
+    will-change: background-position; /* Background animation ko smooth karega */
+}
+.footer-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px; /* Logo aur naam ke beech ki jagah */
+    margin-bottom: 15px;
+}
+
+.footer-logo {
+    height: 40px; /* Footer ke hisaab se height adjust ki */
+    width: auto;
+}
+
+.footer-brand h3 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+/* Footer mein logo ko safed karne ki trick */
+.footer-logo {
+    filter: brightness(0) invert(1); /* Yeh asli logo ko 100% safed kar dega */
+}
+/* ==========================================
+   ADVANCED SOCIAL ICONS (Footer Edition)
+   ========================================== */
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Circle shape */
+    background: #1e293b; /* Dark bg */
+    color: #ffffff;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* Hover Effect: Premium feel */
+.social-icon:hover {
+    transform: translateY(-5px);
+    background: #10b981; /* Green hover color */
+    box-shadow: 0 5px 15px rgba(16, 185, 129, 0.4);
+}
+/* ==========================================
+   ADVANCED BRAND-SPECIFIC HOVER EFFECTS
+   ========================================== */
+
+/* Facebook Hover: Blue */
+.social-icon.fb:hover {
+    transform: translateY(-5px);
+    background: #1877f2; /* Official Facebook Blue */
+    color: #ffffff;
+    box-shadow: 0 5px 15px rgba(24, 119, 242, 0.4);
+}
+
+/* Instagram Hover: Pink/Purple Gradient */
+.social-icon.insta:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: #ffffff;
+    box-shadow: 0 5px 15px rgba(220, 39, 67, 0.4);
+}
